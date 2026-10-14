@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #172554;
+    line-height: 1.6;
+}
+
+header, .about-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header, #skills, #hobbies, #contact {
+    background: #f1f5ff;
+}
+
+header, section {
+    padding: 25px 8%;
+}
+
+header h1, section h2 {
+    margin-top: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.about-box, article, .skills-list p,
+.hobbies-box p, .contact-box {
+    background: #f8faff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+#about img {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.skills-list, .projects-list, .hobbies-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list p, article, .hobbies-box p {
+    flex: 1 1 200px;
+    margin: 0;
+}
+
+.skills-list p {
+    text-align: center;
+}
+
+article h3 {
+    color: #2563eb;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: #0f172a;
+    color: white;
+}
+
+body.dark-theme header,
+body.dark-theme section,
+body.dark-theme .about-box,
+body.dark-theme article,
+body.dark-theme p,
+body.dark-theme .contact-box {
+    color: inherit;
+}
+
+body.dark-theme header,
+body.dark-theme #skills,
+body.dark-theme #hobbies,
+body.dark-theme #contact,
+body.dark-theme .about-box,
+body.dark-theme article,
+body.dark-theme .contact-box,
+body.dark-theme .skills-list p,
+body.dark-theme .hobbies-box p {
+    background: #1e293b;
+}
+
+@media (max-width: 600px) {
+    header, nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 25px 5%;
+    }
+
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projects-list {
+        flex-direction: column;
+    }
+}
